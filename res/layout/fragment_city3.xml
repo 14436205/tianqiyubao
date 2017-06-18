@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/textViewAdd1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="添加城市"
+        android:textSize="30dp"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:visibility="visible" >
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout3"
+            android:layout_width="230dp"
+            android:layout_height="150dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_margin="3dp" >
+
+            <ImageView
+                android:id="@+id/img_fragment_weather1_1"
+                android:layout_width="70dp"
+                android:layout_height="70dp" />
+            <!-- android:src="@drawable/sunny" -->
+
+            <TextView
+                android:id="@+id/tv_fragment_air_quality"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_alignParentTop="true"
+                android:layout_margin="2dp"
+                android:layout_toRightOf="@+id/img_fragment_weather1_1"
+                android:text="空气质量"
+                android:textColor="@android:color/white" />
+
+            <TextView
+                android:id="@+id/tv_fragment_air_quality1_2"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_toRightOf="@+id/tv_fragment_air_pm"
+                android:gravity="center"
+                android:text="null"
+                android:textColor="@android:color/white" />
+
+            <TextView
+                android:id="@+id/tv_fragment_curPm"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_alignLeft="@+id/tv_fragment_air_pm"
+                android:layout_alignRight="@+id/tv_fragment_air_quality"
+                android:layout_below="@+id/tv_fragment_air_pm"
+                android:layout_margin="2dp"
+                android:text="curPm"
+                android:textColor="@android:color/white" />
+
+            <TextView
+                android:id="@+id/tv_fragment_air_pm"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_alignLeft="@+id/tv_fragment_air_quality"
+                android:layout_alignRight="@+id/tv_fragment_air_quality"
+                android:layout_below="@+id/tv_fragment_air_quality"
+                android:layout_margin="2dp"
+                android:text="PM2.5"
+                android:textColor="@android:color/white" />
+
+            <TextView
+                android:id="@+id/tv_fragment_air_pm1_2"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_above="@+id/tv_fragment_curPm"
+                android:layout_toRightOf="@+id/tv_fragment_air_quality"
+                android:gravity="center"
+                android:text="μg/m³"
+                android:textColor="@android:color/white" />
+
+            <TextView
+                android:id="@+id/tv_fragment_wind_speed"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_below="@+id/img_fragment_weather1_1"
+                android:layout_toRightOf="@+id/img_fragment_wind_speed"
+                android:text="风力指数"
+                android:textColor="@android:color/white" />
+
+            <TextView
+                android:id="@+id/tv_fragment_wind_speed1_2"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_alignBottom="@+id/img_fragment_wind_speed"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/tv_fragment_wind_speed"
+                android:layout_toRightOf="@+id/img_fragment_wind_speed"
+                android:text="南风，风力小于3级"
+                android:textColor="@android:color/white"
+                android:textSize="15dp" />
+
+            <ImageView
+                android:id="@+id/img_fragment_wind_speed"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/tv_fragment_curPm"
+                android:src="@drawable/wind_speed" />
+
+            <TextView
+                android:id="@+id/tv_fragment_curPm1_2"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/tv_fragment_air_pm1_2"
+                android:layout_toRightOf="@+id/tv_fragment_curPm"
+                android:gravity="center"
+                android:text="μg/m³"
+                android:textColor="@android:color/white" />
+
+            <TextView
+                android:id="@+id/tv_fragment_water"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:text="星期"
+                android:textColor="@android:color/white"
+                android:textSize="30dp" />
+
+            <TextView
+                android:id="@+id/tv_fragment_water1_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_toRightOf="@+id/tv_fragment_water"
+                android:text="null"
+                android:textColor="@android:color/white"
+                android:textSize="30dp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout2"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true" >
+
+            <TextView
+                android:id="@+id/tv_fragment_temperature"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_marginBottom="8dp"
+                android:layout_marginLeft="8dp"
+                android:gravity="center"
+                android:text="0"
+                android:textColor="@android:color/white"
+                android:textSize="100dp" />
+
+            <TextView
+                android:id="@+id/tv_fragment_point"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/tv_fragment_temperature"
+                android:layout_toRightOf="@+id/tv_fragment_temperature"
+                android:text="○"
+                android:textColor="@android:color/white"
+                android:textSize="40dp" />
+
+            <TextView
+                android:id="@+id/tv_fragment_max"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/tv_fragment_temperature"
+                android:layout_alignLeft="@+id/tv_fragment_temperature"
+                android:layout_marginLeft="4dp"
+                android:text="↑"
+                android:textColor="@android:color/white"
+                android:textSize="25dp" />
+
+            <TextView
+                android:id="@+id/tv_fragment_min"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/tv_fragment_temperature"
+                android:layout_centerHorizontal="true"
+                android:text="↓"
+                android:textColor="@android:color/white"
+                android:textSize="25dp" />
+
+            <TextView
+                android:id="@+id/tv_fragment_max1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/tv_fragment_temperature"
+                android:layout_marginLeft="8dp"
+                android:layout_toRightOf="@+id/tv_fragment_max"
+                android:gravity="center"
+                android:text="0°"
+                android:textColor="@android:color/white"
+                android:textSize="19dp" />
+
+            <TextView
+                android:id="@+id/tv_fragment_min1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/tv_fragment_min"
+                android:layout_marginLeft="8dp"
+                android:layout_toRightOf="@+id/tv_fragment_min"
+                android:gravity="center"
+                android:text="0°"
+                android:textColor="@android:color/white"
+                android:textSize="19dp" />
+
+            <TextView
+                android:id="@+id/weather_fragment_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/tv_fragment_max"
+                android:layout_alignParentTop="true"
+                android:text="null"
+                android:textColor="@android:color/white"
+                android:textSize="30dp" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_change1"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_alignParentRight="true"
+            android:layout_margin="5dp"
+            android:gravity="center"
+            android:text="[切换]" />
+
+        <TextView
+            android:id="@+id/tv_delete1"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/tv_change1"
+            android:layout_margin="5dp"
+            android:layout_marginTop="16dp"
+            android:gravity="center"
+            android:text="[删除]" />
+
+        <TextView
+            android:id="@+id/tv_out_time1"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_margin="5dp"
+            android:layout_marginBottom="50dp"
+            android:gravity="center"
+            android:text="发布时间获取" />
+
+        <TextView
+            android:id="@+id/tv_out_time"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_above="@+id/tv_out_time1"
+            android:layout_alignParentRight="true"
+            android:layout_margin="5dp"
+            android:gravity="center"
+            android:text="发布时间" />
+
+    </RelativeLayout>
+
+</LinearLayout>
